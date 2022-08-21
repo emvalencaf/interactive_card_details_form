@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <form class="form">
+
+            <label for="cardholder" class="label">cardholder name</label>
+
+            <input type="text" class="input" id="cardholder" placeholder="e.g. Jane Appleseed">
+
+            <label for="card-number" class="label">card number</label>
+
+            <input type="text" class="input" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
+            <span class="error">Wrong format, number only</span>
+
+            <div class="card-details-exp-cvc">
+
+                <div class="container">
+
+                    <label for="exp-date" class="label">exp. date (mm/yy)</label>
+
+                    <div class="container-exp-date">
+                        <input type="number" name="exp-date" id="exp-date-MM" placeholder="MM" class="input" max="12" min="1">
+                        <input type="number" name="exp-date" id="exp-date-YY" placeholder="YY" class="input">
+                    </div>
+                    
+                    <span class="error">can't be blank</span>
+                
+                </div>
+
+                <div class="container">
+                    
+                    <label for="card-val" class="label">cvc</label>
+                    
+                    <input type="text" class="input" id="card-val" placeholder="e.g. 123">
+                    
+                    <span class="error">can't be blank</span>
+
+                </div>
+            </div>
+
+            <button class="btn">confirm</button>
+        </form>
+    </main>
+</body>
+</html>
