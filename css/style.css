@@ -33,8 +33,88 @@
 }
 
 body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     height: 100vh;
     color:var(--veryDarkViolet);
+}
+
+header{
+    background-image: url("../img/bg-main-desktop.png");
+    height: 100%;
+    width: 400px;
+}
+
+main{
+    display: flex;
+    position:relative;
+}
+
+.card-container{
+    transform: translateX(-250px);
+    color:var(--white);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background-image: url("../img/bg-card-front.png");
+
+    border-radius: 10px;
+
+    min-width: 400px;
+    height:200px;
+}
+
+svg{
+    margin-left: 20px;
+}
+
+.card-container div h2{
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    
+    margin-bottom: 10px;
+}
+.card-container p{
+    color: var(--white);
+
+}
+
+.card-datails{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card-datails span{
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 0px 20px;
+}
+
+.card-container-back{
+    position: absolute;
+    transform: translateY(220px) translateX(-150px);
+    color:var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url('../img/bg-card-back.png');
+    background-size: cover;
+    border-radius: 10px;
+
+
+    min-width: 400px;
+    height: 200px;
+}
+
+.card-container-back span{
+    position: absolute;
+    transform: translateY(8px);
+    padding:45px;
 }
 
 .form{
