@@ -1,0 +1,50 @@
+@media(max-width:750px){
+    body{
+        flex-direction: column;
+    }
+    header{
+        background-image: url("../img/bg-main-mobile.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 35%;
+        width: 100%;
+    }
+
+    main{
+        flex-direction: column;
+        height: 45%;
+    }
+
+    .card-container{
+        transform: translateX(-5px) translateY(190px);
+
+        color:var(--white);
+    
+        max-width: 250px;
+        height: 150px;
+        z-index: 10;
+    }
+
+    .card-container div h2{
+        font-size: 1.25em;
+        
+    }
+
+    .card-datails span{
+        font-size: 0.8em;
+    }
+
+    
+    .card-container-back{
+        transform: translateY(90px) translateX(10px);
+
+        width: 250px;
+        height: 150px;
+    }
+
+    .card-container-back span{
+        transform: translateX(25px);
+
+    }
+}
