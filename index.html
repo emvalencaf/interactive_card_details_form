@@ -16,25 +16,25 @@
         <div>
             <h2 id="card-number">0000 0000 0000 0000</h2>
             <div class="card-datails">
-                <span id="cardholder">Eds</span>
-                <span id="exp-data">00/90</span>
+                <span id="cardholder">cardholder</span>
+                <span id="exp-date">12/22</span>
             </div>
         </div>
     </div>
     <div class="card-container-back">
-        <span>000</span>
+        <span id="card-verif">000</span>
     </div>
     <main>
         <form class="form">
             
             <label for="cardholder" class="label">cardholder name</label>
 
-            <input type="text" class="input" id="cardholder" placeholder="e.g. Jane Appleseed">
-
+            <input type="text" class="input" id="input-cardholder" placeholder="e.g. Jane Appleseed" error-data="error-name">
+            <span class="error" id="error-name"></span>
             <label for="card-number" class="label">card number</label>
 
-            <input type="text" class="input" id="input-card-number" placeholder="e.g. 1234 5678 9123 0000">
-            <span class="error">Wrong format, number only</span>
+            <input type="text" class="input" id="input-card-number" placeholder="e.g. 1234 5678 9123 0000" error-data="error-number">
+            <span class="error" id="error-number">Wrong format, number only</span>
 
             <div class="card-details-exp-cvc">
 
@@ -43,11 +43,11 @@
                     <label for="exp-date" class="label">exp. date (mm/yy)</label>
 
                     <div class="container-exp-date">
-                        <input type="number" name="exp-date" id="exp-date-MM" placeholder="MM" class="input" max="12" min="1">
-                        <input type="number" name="exp-date" id="exp-date-YY" placeholder="YY" class="input">
+                        <input type="number" name="exp-date" id="exp-date-MM" placeholder="MM" class="input" max="12" min="1" error-data="error-date">
+                        <input type="number" name="exp-date" id="exp-date-YY" placeholder="YY" class="input" error-data="error-date">
                     </div>
                     
-                    <span class="error">can't be blank</span>
+                    <span class="error" id="error-date">can't be blank</span>
                 
                 </div>
 
@@ -55,9 +55,9 @@
                     
                     <label for="card-val" class="label">cvc</label>
                     
-                    <input type="text" class="input" id="card-val" placeholder="e.g. 123">
+                    <input type="text" class="input" id="input-card-verif" placeholder="e.g. 123" error-data="error-verif">
                     
-                    <span class="error">can't be blank</span>
+                    <span class="error" id="error-verif">can't be blank</span>
 
                 </div>
             </div>
@@ -65,5 +65,6 @@
             <button class="btn">confirm</button>
         </form>
     </main>
+    <script src="./js/index.js" type="module"></script>
 </body>
 </html>
