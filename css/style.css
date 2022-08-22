@@ -158,7 +158,8 @@ input:focus, .input:hover{
 }
 
 .input.error{
-    border-color: var(--red)!important;
+    display:inline;
+    border: 1px solid var(--red) !important;
 }
 
 .card-details-exp-cvc{
