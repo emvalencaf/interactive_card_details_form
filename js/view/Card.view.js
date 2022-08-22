@@ -34,16 +34,36 @@ export class CardView{
     }
 
     renderError(message, errorInput){
-        console.log(message, errorInput)
+
         const error = this.form.querySelector(`#${errorInput}`)
-        const input = this.form.querySelector(`[error-data="${errorInput}"]`)
+        const inputs = this.form.querySelectorAll(`input[error-data="${errorInput}"]`)
         error.classList.add("active")
         error.textContent = message
-        input.classList.add("error")
-        input.blur()
+
+        if(inputs.length  > 1){
+            inputs.forEach(input =>{
+                input.classList.add("error")
+                input.blur()
+            })
+        } else {
+            inputs[0].classList.add("error")
+            inputs[0].blur()
+        }
+
+        
     }
 
     renderOutError(input){
+
+        if(input.getAttribute("error-data") === "error-date"){
+            
+            const array = [...this.form.querySelectorAll(`[error-data="error-date"]`)]
+            console.log(array)
+            array.forEach(input => input.classList.remove("error"))
+            document.querySelector(`#${input.getAttribute("error-data")}`).classList.remove("active")
+            return
+        }
+    
         input.classList.remove("error")
         document.querySelector(`#${input.getAttribute("error-data")}`).classList.remove("active")
         input.value = ""

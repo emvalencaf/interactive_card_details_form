@@ -52,6 +52,17 @@ export class CardController{
 
     renderOutError(input){
         console.log(input)
+        
+        if(input === this.view.form.querySelector("#input-cardholder")) this.view.renderCardholderName("cardholder")
+
+        if(input === this.view.form.querySelector("#input-card-number")) this.view.renderCardholderNumber("0000000000000000")
+
+        if(input === this.view.form.querySelector("#exp-date-MM")) this.view.renderCardDate("MM/YY")
+
+        if(input === this.view.form.querySelector("#exp-date-MM")) this.view.renderCardDate("MM/YY")
+
+        if(input === this.view.form.querySelector("#input-card-verif")) this.view.renderCardCvc("000")
+
         this.view.renderOutError(input)
     }
 

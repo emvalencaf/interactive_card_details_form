@@ -59,6 +59,11 @@ export class CardService{
         if(date < currentShortYear) throw new Error("your credit card got expired")
 
         if(this.card.date.indexOf("MM") > -1) return this.card.date = `MM/${date}`
+
+        const currentMonth = currentDate.getMonth() + 1
+        const cardMonth = this.card.date[0] + this.card.date[1]
+
+        if(cardMonth < currentMonth && date === currentShortYear) throw new Error("your credit card got expired")
         
         return this.card.date = `${this.card.date[0]}${this.card.date[1]}/${date}`
     }
