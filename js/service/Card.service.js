@@ -39,7 +39,9 @@ export class CardService{
         const currentDate = new Date()
         const currentYear = currentDate.getFullYear() + ""
         const currentShortYear = currentYear[2] + currentYear[3]
-        const currentMonth = currentDate.getMonth + 1
+        const currentMonth = currentDate.getMonth() + 1
+
+        console.log(currentMonth)
 
         if(date < currentMonth && currentShortYear === cardShortYear) throw new Error("your credit card got expired")
 
