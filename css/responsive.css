@@ -48,3 +48,22 @@
 
     }
 }
+
+@media (max-height:500px) {
+    .card-container{
+        transform: translateX(-5px) translateY(110px);
+
+        color:var(--white);
+    
+        max-width: 250px;
+        height: 150px;
+        z-index: 10;
+    }
+
+    .card-container-back{
+        transform: translateY(20px) translateX(10px);
+
+        width: 250px;
+        height: 150px;
+    }
+}
